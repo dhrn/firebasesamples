@@ -5,11 +5,26 @@
 <div class="row columns">
   <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" (click)="login()" *ngIf="!(user | async)?.uid">Anonymous Login</button>
   <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" (click)="logout()" *ngIf="(user | async)?.uid">Logout</button>
-  <div class="mdl-textfield mdl-js-textfield">
+  <!--div class="mdl-textfield mdl-js-textfield">
   <input   class="mdl-textfield__input" type="text" id="message" *ngIf="(user | async)?.uid" placeholder="What is it that you do?" (keyup.enter)="Send($event.target.value)" [(ngModel)]="msgVal" />
-  </div>
+  </div-->
     <div id="details-container">
     <p *ngFor="let item of items | async"><img src="">{{item.message}}</p>
   </div>
 </div>
 </div>
+
+
+<!--div class="container">
+  <div class="info">
+    <h6>Login Portal</h6> <img src="../../../assets/img/4.png"/>
+  </div>
+</div>
+<div class="form">
+  <div class=""></div>
+  <form class="login-form" #formData="ngForm" (ngSubmit)="login(formData.value)">
+    <input type="text" placeholder="username" name="username" ngModel />
+    <input type="password"  placeholder="password" name="password" ngModel/>
+    <button>login</button>
+  </form>
+</div-->

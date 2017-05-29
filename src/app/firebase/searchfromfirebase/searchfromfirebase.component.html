@@ -1,6 +1,6 @@
 <div align="center">
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <input class="mdl-textfield__input" type="text" id="sample4"  #data (keyup)="filtering(data.value)">
+    <input class="mdl-textfield__input" type="text" id="sample4" placeholder="search user" #data (keyup)="filtering(data.value)">
     <label class="mdl-textfield__label" for="sample4"></label>
     <span class="mdl-textfield__error">Input is not a number!</span>
   </div>
@@ -9,9 +9,9 @@
 <ul class="demo-list-icon mdl-list">
   <li class="mdl-list__item" *ngFor="let item of filtered">
     <span class="mdl-list__item-primary-content">
-    <i class="material-icons mdl-list__item-icon">person</i>
-    {{item.name}}
-</span>
+      <i class="material-icons mdl-list__item-avatar">person</i>
+      <span>{{item.name}}</span>
+    </span>
   </li>
 </ul>
 
