@@ -1,0 +1,39 @@
+<!-- Colored FAB button with ripple -->
+<br/><br/>
+<div align="center">
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+  <i class="material-icons">add</i>
+</button>
+<b>Welcome to Add User</b>
+  <br/><br/><br/><br/>
+<form #formData="ngForm" (ngSubmit)="putuser(formData.value)" >
+
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text"  name="name"  minlength="4" ngModel>
+    <label class="mdl-textfield__label" for="sample1">Name...</label>
+  </div>
+  <br/>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="age" ngModel>
+    <label class="mdl-textfield__label" for="sample3">Age...</label>
+    <span class="mdl-textfield__error">Input is not a number!</span>
+  </div>
+  <br/>
+
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text"  name="company" ngModel>
+    <label class="mdl-textfield__label" for="sample2">Company Name...</label>
+  </div>
+  <br/>
+
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text"  name="position" ngModel>
+    <label class="mdl-textfield__label" for="sample4">Position...</label>
+  </div>
+  <br/>
+  <button id="tt3" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" > Adduser </button>
+  <div class="mdl-tooltip" data-mdl-for="tt3">
+    Add User<strong>to Firebase</strong>
+  </div>
+</form>
+</div>

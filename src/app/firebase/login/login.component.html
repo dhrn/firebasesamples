@@ -1,0 +1,15 @@
+<br/><br/><br/><br/>
+<div align="center">
+<!-- Icon badge on icon -->
+<div class="material-icons mdl-badge mdl-badge--overlap" data-badge="♥">account_box</div>
+<div class="row columns">
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" (click)="login()" *ngIf="!(user | async)?.uid">Anonymous Login</button>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" (click)="logout()" *ngIf="(user | async)?.uid">Logout</button>
+  <div class="mdl-textfield mdl-js-textfield">
+  <input   class="mdl-textfield__input" type="text" id="message" *ngIf="(user | async)?.uid" placeholder="What is it that you do?" (keyup.enter)="Send($event.target.value)" [(ngModel)]="msgVal" />
+  </div>
+    <div id="details-container">
+    <p *ngFor="let item of items | async"><img src="">{{item.message}}</p>
+  </div>
+</div>
+</div>

@@ -1,0 +1,51 @@
+<!-- Icon badge on icon -->
+<div align="center" >
+<br>
+<div class="material-icons mdl-badge mdl-badge--overlap" data-badge="♥">account_box</div>
+<b>All user from Firebase</b>
+</div>
+
+<ul class="demo-list-three mdl-list" class="container">
+  <li *ngFor="let item of itemsuser | async" (click)="onSelect(item)" class="mdl-list__item mdl-list__item--three-line">
+    <span class="mdl-list__item-primary-content">
+      <i class="material-icons mdl-list__item-avatar">person</i>
+      <span>{{item.name}}</span>
+      <span class="mdl-list__item-text-body">
+      {{item.company}}
+      </span>
+    </span>
+  </li>
+</ul>
+
+<ul class="demo-list-three mdl-list" class="container" *ngIf="selectedtoken">
+  <h5>Selected User</h5>
+  <li  class="mdl-list__item mdl-list__item--three-line">
+    <span class="mdl-list__item-primary-content">
+      <i class="material-icons mdl-list__item-avatar">person</i>
+      <span>{{selectedname}}</span>
+      <span class="mdl-list__item-text-body">
+        <b>Age :</b> {{selectedage}}<br/> <b>Company:</b>{{selectedcompany}} <b>Position</b>{{selectedposition}}
+
+      </span>
+    </span>
+    <br/>
+    <span class="mdl-list__item-secondary-content">
+      <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+    </span>
+  </li>
+  <br/>
+  <!--app-getspecific [userkey]="selectedtoken"></app-getspecific-->
+  <!-- Colored raised button -->
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" (click)="navigate()" >
+    View Details
+  </button>
+</ul>
+
+<!-- Colored FAB button with ripple -->
+<button id="tt3" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="adduser()">
+  <i class="material-icons">add</i>
+</button>
+<div class="mdl-tooltip" data-mdl-for="tt3">
+  Add User<strong> to Firebase</strong>
+</div>
+<b>AddUser</b>

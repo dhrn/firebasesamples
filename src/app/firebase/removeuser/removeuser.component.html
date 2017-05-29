@@ -1,0 +1,21 @@
+<br/><br/><br/><br/><br/>
+<div align="center">
+  <i class="material-icons">delete</i>
+  <b>Welcome to remove User</b>
+</div>
+<div class="container">
+<ul class="demo-list-three mdl-list" class="container">
+  <li *ngFor="let item of itemsuser | async" class="mdl-list__item mdl-list__item--three-line">
+    <span class="mdl-list__item-primary-content">
+      <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">
+      <i class="material-icons mdl-list__item-avatar">person</i>
+      </span>
+      <span>{{item.name}}</span>
+      <button type="button" (click)="remove(item.$key)" class="mdl-chip__action"><i class="material-icons">cancel</i></button>
+      <span class="mdl-list__item-text-body">
+      {{item.company}}
+      </span>
+    </span>
+  </li>
+</ul>
+</div>
