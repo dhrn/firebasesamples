@@ -1,16 +1,23 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
+<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+  <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+    <div class="mdl-layout__header-row">      <!-- Title -->
       <span class="mdl-layout-title">Employee Information Management System</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+        <i class="material-icons">account_box</i>
+      </button>
+      <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+        <li class="mdl-menu__item">About</li>
+        <li class="mdl-menu__item">Contact</li>
+        <li class="mdl-menu__item">Sign In or Out</li>
+      </ul>
     </div>
   </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Menu</span>
-    <nav class="mdl-navigation" >
+  <div class="demo-drawer mdl-layout__drawer  mdl-color-text--blue-grey-50">
+  <span class="mdl-layout-title">Menu</span>
+    <nav class="mdl-navigation dl-navigation mdl-color--blue-grey-60" >
 
       <a class="mdl-navigation__link" routerLink="viewall" routerLinkActive="active">All User</a>
       <a class="mdl-navigation__link" routerLink="get/1" routerLinkActive="active">Get Specific</a>
@@ -20,8 +27,9 @@
       <a class="mdl-navigation__link" routerLink="login" routerLinkActive="active">login</a>
     </nav>
   </div>
-  <main class="mdl-layout__content">
+  <main class="mdl-layout__content mdl-color--grey-100">
     <div class="page-content"><!-- Your content goes here --></div>
-    <router-outlet></router-outlet>
+       <router-outlet></router-outlet>
   </main>
+
 </div>
