@@ -19,7 +19,7 @@ export class AppComponent implements  OnInit{
   this.loggedornot = Loginsession.loginuser;
   }
   login(){
-    this.loggedornot = Loginsession.loginuser;
+    this.loggedornot = 'true';
     console.log('client',this.loggedornot);
     this._route.navigate(['/login']);
   }
@@ -27,6 +27,6 @@ export class AppComponent implements  OnInit{
     console.log('logout');
     this._loginsession.logout();
     this.loggedornot = Loginsession.loginuser;
-    this._route.navigate(['/viewall']);
+    this._route.navigate(['/login']);
   }
 }

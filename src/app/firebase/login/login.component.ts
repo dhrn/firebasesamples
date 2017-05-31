@@ -32,10 +32,15 @@ export class LoginComponent implements OnInit {
 
     constructor(private _route:Router,private  _loginsession:Loginsession){}
 
-    login(){
-        this._loginsession.login();
-        console.log('server',Loginsession.loginuser);
-        this._route.navigate(['/viewall']);
+    login(data:any){
+        console.log('logged username',data.username,'password',data.password);
+        if(data.username == 'dharan' && data.password == 'dharan'){
+            console.log('succeed');
+            this._loginsession.login();
+            console.log('server',Loginsession.loginuser);
+            this._route.navigate(['/viewall']);
+
+        }
     }
 
 }
