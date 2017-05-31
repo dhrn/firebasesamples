@@ -11,8 +11,9 @@
       <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
         <li class="mdl-menu__item">About</li>
         <li class="mdl-menu__item">Contact</li>
-        <li class="mdl-menu__item">Sign In or Out</li>
-      </ul>
+        <li class="mdl-menu__item" (click)="login()" *ngIf="!loggedornot" >Log In </li>
+        <li class="mdl-menu__item" (click)="logout()" *ngIf="loggedornot" >Log out </li>
+       </ul>
     </div>
   </header>
   <div class="demo-drawer mdl-layout__drawer  mdl-color-text--blue-grey-50">
@@ -24,7 +25,7 @@
       <a class="mdl-navigation__link" routerLink="adduser" routerLinkActive="active">Add User</a>
       <a class="mdl-navigation__link" routerLink="search" routerLinkActive="active">Search User</a>
       <a class="mdl-navigation__link" routerLink="delete" routerLinkActive="active">Remove User</a>
-      <a class="mdl-navigation__link" routerLink="login" routerLinkActive="active">login</a>
+      <!--<a class="mdl-navigation__link" routerLink="login" routerLinkActive="active">login</a>-->
     </nav>
   </div>
   <main class="mdl-layout__content mdl-color--grey-100">

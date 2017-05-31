@@ -13,7 +13,7 @@ import {SearchfromfirebaseComponent} from "./searchfromfirebase/searchfromfireba
 const route:Routes=[
     { path: '',redirectTo: '/login', pathMatch: 'full' },
     {path:'login',component:LoginComponent},
-    {path:'adduser',component:AdduserComponent},
+    {path:'adduser',component:AdduserComponent , canActivate: [ AuthguardService ],canDeactivate : [ UnchangesgurdService] },
     {path:'viewall',component:GetfromfirebaseComponent },
     {path:'get/:id',component: GetspecificComponent },
     {path:'delete', component:RemoveuserComponent},

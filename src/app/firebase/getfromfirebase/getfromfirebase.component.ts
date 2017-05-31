@@ -1,8 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
-import {AngularFireAuth} from 'angularfire2/auth';
-import {Observable} from 'rxjs/Observable';
-import * as firebase from 'firebase';
 import {Router} from "@angular/router";
 
 @Component({
@@ -12,7 +9,6 @@ import {Router} from "@angular/router";
   encapsulation: ViewEncapsulation.Emulated
 })
 export class GetfromfirebaseComponent implements OnInit {
-  items: FirebaseListObservable<any[]>;
   itemsuser: FirebaseListObservable<any[]>;
   getuser: any;
   selectedname ;
@@ -21,7 +17,7 @@ export class GetfromfirebaseComponent implements OnInit {
   selectedage;
   selectedposition;
   selectedcompany;
-  constructor(public afAuth: AngularFireAuth, public af: AngularFireDatabase,private  _router:Router) { }
+  constructor(public af: AngularFireDatabase,private  _router:Router) { }
 
   ngOnInit() {
    this.getall();

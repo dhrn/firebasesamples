@@ -17,6 +17,7 @@ import { GetspecificComponent } from './getspecific/getspecific.component';
 import { AdduserComponent } from './adduser/adduser.component';
 import {RemoveuserComponent} from "./removeuser/removeuser.component";
 import { SearchfromfirebaseComponent } from './searchfromfirebase/searchfromfirebase.component';
+import {Loginsession} from "./shared/loginsession";
 
 
 export const firebaseConfig = {
@@ -40,6 +41,6 @@ export const firebaseConfig = {
     ],
   declarations: [GetfromfirebaseComponent, LoginComponent, NotfoundComponent, GetspecificComponent, AdduserComponent,RemoveuserComponent, SearchfromfirebaseComponent],
   exports: [ LoginComponent  ],
-  providers: [ AuthguardService , UnchangesgurdService  ]
+  providers: [ AuthguardService , UnchangesgurdService , Loginsession ]
 })
 export class FirebaseModule { }

@@ -5,8 +5,8 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import {FirebaseModule} from './firebase/firebase.module';
-import {Router} from "@angular/router";
 import {Approute} from "./approute";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import {Approute} from "./approute";
     FormsModule,
     HttpModule,
     FirebaseModule,
-    Approute
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

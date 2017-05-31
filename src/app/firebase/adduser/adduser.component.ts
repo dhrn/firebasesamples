@@ -1,5 +1,4 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {AngularFireAuth} from "angularfire2/auth";
 import {AngularFireDatabase, FirebaseListObservable} from "angularfire2/database";
 import {Router} from "@angular/router";
 
@@ -12,7 +11,7 @@ import {Router} from "@angular/router";
 export class AdduserComponent implements OnInit {
   newuser: FirebaseListObservable<any[]>;
 
-  constructor(public afAuth: AngularFireAuth, public af: AngularFireDatabase,private  _router:Router) {
+  constructor(public af: AngularFireDatabase,private  _router:Router) {
     this.newuser = af.list('/users');
   }
 

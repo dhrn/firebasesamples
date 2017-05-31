@@ -1,12 +1,27 @@
 .demo-list-three {
     width: 650px;
 }
-.container{
-    margin-right: 150px;
-    margin-left: 80px;
-}
 
 .selected{
     margin-right: 150px;
     margin-left: 250px;
+}
+.demo-card-square.mdl-card {
+    width: 700px;
+    height: auto;
+
+}
+.demo-card-square.mdl-card1 {
+    margin: 700px;
+    height: auto;
+
+}
+@media screen and (max-width: 500px) {
+    /* Phone Styles */
+}
+@media screen and (max-width: 700px) {
+    /* Tablet Styles */
+}
+.demo-card-square > .mdl-card__title {
+    color: #fff;
 }

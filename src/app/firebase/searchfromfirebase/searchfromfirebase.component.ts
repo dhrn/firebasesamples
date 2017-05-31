@@ -1,6 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {AngularFireDatabase, FirebaseListObservable} from "angularfire2/database";
-import {AngularFireAuth} from "angularfire2/auth";
 import {Employee} from "../shared/Employees";
 
 
@@ -14,7 +13,7 @@ export class SearchfromfirebaseComponent implements OnInit {
 
   allemp: Employee[];
   filtered: Employee[];
-    constructor(public afAuth: AngularFireAuth, public af: AngularFireDatabase) {
+    constructor(public af: AngularFireDatabase) {
 
   }
 
