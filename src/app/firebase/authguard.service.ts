@@ -13,7 +13,7 @@ export class AuthguardService implements CanActivate{
 
 
   canActivate() {
-    console.log('Authorized ',Loginsession.loginuser);
-    return Loginsession.loginuser;
+    console.log('Authorized ',Loginsession.admin);
+    return Loginsession.admin;
   }
 }

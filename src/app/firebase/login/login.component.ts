@@ -37,9 +37,16 @@ export class LoginComponent implements OnInit {
         if(data.username == 'dharan' && data.password == 'dharan'){
             console.log('succeed');
             this._loginsession.login();
+            this._loginsession.adminlogin();
             console.log('server',Loginsession.loginuser);
             this._route.navigate(['/viewall']);
 
+        }
+        else {
+            console.log('succeed');
+            this._loginsession.login();
+            console.log('server',Loginsession.loginuser);
+            this._route.navigate(['/viewall']);
         }
     }
 

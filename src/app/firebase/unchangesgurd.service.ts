@@ -11,7 +11,7 @@ export class UnchangesgurdService implements CanDeactivate<AdduserComponent>{
 
 
   canDeactivate(component: AdduserComponent, currentRoute: ActivatedRouteSnapshot, currentState: RouterStateSnapshot, nextState?: RouterStateSnapshot) {
-    console.log('Authorized ',Loginsession.loginuser);
+    console.log('Authorized ',Loginsession.admin);
     return window.confirm('you have unsaved changes still want to leave?');
   }
 }

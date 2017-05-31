@@ -26,6 +26,9 @@ export class AppComponent implements  OnInit{
   logout(){
     console.log('logout');
     this._loginsession.logout();
+    if(Loginsession.admin == true){
+        this._loginsession.adminlogout();
+    }
     this.loggedornot = Loginsession.loginuser;
     this._route.navigate(['/login']);
   }
